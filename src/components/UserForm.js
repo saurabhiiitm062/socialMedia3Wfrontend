@@ -8,8 +8,7 @@ function UserForm() {
     socialHandle: "",
     images: [],
   });
-  console.log("formData", formData);
-  console.table(formData, "tableData");
+  const API_ROUTES = "https://social-media3-wbackend.vercel.app/";
 
   const handleFileChange = (e) => {
     setFormData({ ...formData, images: e.target.files });
@@ -30,7 +29,7 @@ function UserForm() {
 
     try {
       // Make API request to upload data
-      await axios.post("http://localhost:5000/api/submit", data, {
+      await axios.post(`${API_ROUTES}api/submit`, data, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       alert("Submission Successful!");

@@ -10,7 +10,7 @@ import UserForm from "./components/UserForm";
 import Dashboard from "./components/Dashboard";
 import AdminLoginForm from "./components/AdminLoginForm";
 import AdminRegistration from "./components/AdminRegistration";
-import "./App.css"; 
+import "./App.css";
 
 function App() {
   const userRole = localStorage.getItem("userRole");

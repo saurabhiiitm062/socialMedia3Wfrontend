@@ -7,6 +7,7 @@ function AdminLoginForm() {
   const [formData, setFormData] = useState({ email: "", password: "" });
   const [error, setError] = useState("");
   const navigate = useNavigate();
+  const API_ROUTES = "https://social-media3-wbackend.vercel.app/";
 
   const handleInputChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -16,7 +17,7 @@ function AdminLoginForm() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://social-media3-wbackend.vercel.app/api/admin-login",
+        `${API_ROUTES}/admin-login`,
         formData
       );
       console.log("Login response:", response.data);

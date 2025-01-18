@@ -12,6 +12,7 @@ function AdminRegistrationForm() {
   });
   const [error, setError] = useState("");
   const navigate = useNavigate();
+  const API_ROUTES = "https://social-media3-wbackend.vercel.app/";
 
   const handleInputChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -26,7 +27,7 @@ function AdminRegistrationForm() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/admin-register",
+        `${API_ROUTES}/admin-register`,
         formData
       );
       alert("Registration Successful!");

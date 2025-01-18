@@ -8,7 +8,7 @@ function Dashboard() {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const token = localStorage.getItem("authToken");
-  console.log(token);
+  const API_ROUTES = "https://social-media3-wbackend.vercel.app/";
 
   useEffect(() => {
     if (!token) {
@@ -17,7 +17,7 @@ function Dashboard() {
     }
 
     axios
-      .get("http://localhost:5000/api/users", {
+      .get(`${API_ROUTES}/api/users`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -33,7 +33,7 @@ function Dashboard() {
         }
       });
 
-    const eventSource = new EventSource("http://localhost:5000/events");
+    const eventSource = new EventSource(`${API_ROUTES}events`);
     eventSource.onmessage = function (event) {
       const updatedUsers = JSON.parse(event.data);
       setUsers(updatedUsers);
@@ -53,7 +53,7 @@ function Dashboard() {
   };
 
   const handleImageClick = (imagePath) => {
-    window.open(`http://localhost:5000/${imagePath}`, "_blank");
+    window.open(`${API_ROUTES}/${imagePath}`, "_blank");
   };
 
   const closeModal = () => {
@@ -100,7 +100,7 @@ function Dashboard() {
                             className="image-thumbnail-container"
                           >
                             <img
-                              src={`http://localhost:5000/${imagePath}`}
+                              src={`${API_ROUTES}${imagePath}`}
                               alt={`User ${user.name}`}
                               className="user-image-thumbnail"
                               onClick={() => handleImageClick(imagePath)}
@@ -124,7 +124,7 @@ function Dashboard() {
             onClick={(e) => e.stopPropagation()}
           >
             <img
-              src={`http://localhost:5000/${selectedImage}`}
+              src={`${API_ROUTES}${selectedImage}`}
               alt="Selected"
               className="image-modal-img"
             />
