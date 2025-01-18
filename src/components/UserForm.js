@@ -31,6 +31,7 @@ function UserForm() {
       // Make API request to upload data
       await axios.post(`${API_ROUTES}api/submit`, data, {
         headers: { "Content-Type": "multipart/form-data" },
+        withCredentials: true,
       });
       alert("Submission Successful!");
       setFormData({ name: "", socialHandle: "", images: [] });

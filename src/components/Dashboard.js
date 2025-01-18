@@ -21,6 +21,7 @@ function Dashboard() {
         headers: {
           Authorization: `Bearer ${token}`,
         },
+        withCredentials: true,
       })
       .then((response) => {
         setUsers(response.data);
