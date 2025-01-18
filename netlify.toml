@@ -1,4 +1,5 @@
-[build]
-  command = "npm run build"
-  publish = "build"
-  base = "/"
+[[redirects]]
+  # Redirect all requests to index.html to support React Router
+  from = "/*"
+  to = "/index.html"
+  status = 200
