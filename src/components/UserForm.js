@@ -31,13 +31,12 @@ function UserForm() {
       // Make API request to upload data
       await axios.post(`${API_ROUTES}api/submit`, data, {
         headers: { "Content-Type": "multipart/form-data" },
-        Credentials: true,
+        withCredentials: true, // Set withCredentials to true
       });
       alert("Submission Successful!");
       setFormData({ name: "", socialHandle: "", images: [] });
     } catch (error) {
-      // alert("Error: " + error.message);
-      console.error(error.message);
+      console.error("Error: " + error.message);
     }
   };
 
