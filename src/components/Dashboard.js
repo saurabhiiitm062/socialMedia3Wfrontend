@@ -9,7 +9,7 @@ function Dashboard() {
 
   const token = localStorage.getItem("authToken");
   const API_ROUTES =
-    "https://server-dmtaeuoai-saurabhiiitm062s-projects.vercel.app/";
+    "https://server-ap7dimg9h-saurabhiiitm062s-projects.vercel.app/";
 
   useEffect(() => {
     if (!token) {

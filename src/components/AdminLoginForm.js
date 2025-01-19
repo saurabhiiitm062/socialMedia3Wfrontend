@@ -8,7 +8,7 @@ function AdminLoginForm() {
   const [error, setError] = useState("");
   const navigate = useNavigate();
   const API_ROUTES =
-    "https://server-dmtaeuoai-saurabhiiitm062s-projects.vercel.app/";
+    "https://server-ap7dimg9h-saurabhiiitm062s-projects.vercel.app/";
   const handleInputChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
