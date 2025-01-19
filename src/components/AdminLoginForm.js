@@ -7,7 +7,8 @@ function AdminLoginForm() {
   const [formData, setFormData] = useState({ email: "", password: "" });
   const [error, setError] = useState("");
   const navigate = useNavigate();
-  const API_ROUTES = "https://server-beta-blush.vercel.app/";
+  const API_ROUTES =
+    "https://server-dmtaeuoai-saurabhiiitm062s-projects.vercel.app/";
   const handleInputChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -15,10 +16,7 @@ function AdminLoginForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(
-        `${API_ROUTES}/admin-login`,
-        formData
-      );
+      const response = await axios.post(`${API_ROUTES}/admin-login`, formData);
       console.log("Login response:", response.data);
       alert("Login Successful!");
 
