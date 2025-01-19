@@ -7,7 +7,7 @@ function AdminLoginForm() {
   const [formData, setFormData] = useState({ email: "", password: "" });
   const [error, setError] = useState("");
   const navigate = useNavigate();
-  const API_ROUTES ="https://server-r06px22ny-saurabhiiitm062s-projects.vercel.app/";
+  const API_ROUTES = "https://server-beta-blush.vercel.app/";
   const handleInputChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };

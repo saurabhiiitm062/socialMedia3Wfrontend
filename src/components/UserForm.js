@@ -8,7 +8,7 @@ function UserForm() {
     socialHandle: "",
     images: [],
   });
-  const API_ROUTES ="https://server-r06px22ny-saurabhiiitm062s-projects.vercel.app/";
+  const API_ROUTES = "https://server-beta-blush.vercel.app/";
 
   const handleFileChange = (e) => {
     setFormData({ ...formData, images: e.target.files });
