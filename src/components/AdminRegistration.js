@@ -12,8 +12,8 @@ function AdminRegistrationForm() {
   });
   const [error, setError] = useState("");
   const navigate = useNavigate();
-  const API_ROUTES =
-    "https://server-drwy6diix-saurabhiiitm062s-projects.vercel.app/";
+  const API_ROUTES = process.env.REACT_APP_API_URL;
+  console.log(API_ROUTES, "API_ROUTES");
 
   const handleInputChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
