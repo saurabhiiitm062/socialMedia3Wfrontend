@@ -8,7 +8,8 @@ function UserForm() {
     socialHandle: "",
     images: [],
   });
-  const API_ROUTES = process.env.REACT_APP_API_URL;
+  const API_ROUTES =
+    "https://server-aslpopwc0-saurabhiiitm062s-projects.vercel.app/";
 
   const handleFileChange = (e) => {
     setFormData({ ...formData, images: e.target.files });

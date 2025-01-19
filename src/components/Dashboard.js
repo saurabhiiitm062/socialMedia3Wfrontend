@@ -8,7 +8,8 @@ function Dashboard() {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const token = localStorage.getItem("authToken");
-const API_ROUTES = process.env.REACT_APP_API_URL;
+const API_ROUTES =
+  "https://server-aslpopwc0-saurabhiiitm062s-projects.vercel.app/";
 
   useEffect(() => {
     if (!token) {
