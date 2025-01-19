@@ -13,7 +13,7 @@ function AdminRegistrationForm() {
   const [error, setError] = useState("");
   const navigate = useNavigate();
  const API_ROUTES =
-   "https://server-aslpopwc0-saurabhiiitm062s-projects.vercel.app/";
+   "https://server-k3b8kkqbk-saurabhiiitm062s-projects.vercel.app/";
 
   const handleInputChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
