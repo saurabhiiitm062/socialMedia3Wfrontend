@@ -16,7 +16,10 @@ function AdminLoginForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`${API_ROUTES}/admin-login`, formData);
+      const response = await axios.post(
+        `${API_ROUTES}api/admin-login`,
+        formData
+      );
       console.log("Login response:", response.data);
       alert("Login Successful!");
 

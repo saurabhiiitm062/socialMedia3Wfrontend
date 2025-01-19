@@ -28,7 +28,7 @@ function AdminRegistrationForm() {
 
     try {
       const response = await axios.post(
-        `${API_ROUTES}admin-register`,
+        `${API_ROUTES}api/admin-register`,
         formData
       );
       alert("Registration Successful!");
