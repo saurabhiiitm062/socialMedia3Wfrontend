@@ -9,7 +9,7 @@ function UserForm() {
     images: [],
   });
   const API_ROUTES =
-    "https://server-ap7dimg9h-saurabhiiitm062s-projects.vercel.app/";
+    "https://server-drwy6diix-saurabhiiitm062s-projects.vercel.app/";
 
   const handleFileChange = (e) => {
     setFormData({ ...formData, images: e.target.files });
